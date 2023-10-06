@@ -27,8 +27,9 @@ CFLAGS = -Wall -Wextra -Werror
 # Mis metodos --------------------------------------------
 all: 		${NAME}
 
-${NAME}:	${OBJS}
-			ar rcs ${NAME} ${OBJS}
+${NAME}:	${OBJS} ${HEADER}
+			ar rcs $@ $?
+
 
 #bonus:		${OBJS} ${OBJSBONUS}
 #			ar rcs ${NAME} ${OBJS} ${OBJSBONUS}
